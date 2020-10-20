@@ -63,8 +63,17 @@ namespace forgesample.Controllers
                 var objectsList = objects.GetObjects(id);
                 foreach (KeyValuePair<string, dynamic> objInfo in new DynamicDictionaryItems(objectsList.items))
                 {
-                    nodes.Add(new TreeNode(Base64Encode((string)objInfo.Value.objectId),
-                      objInfo.Value.objectKey, "object", false));
+                    string fileName = objInfo.Value.objectKey;
+                    if (fileName.ToLower().Contains("zip"))
+                    {
+                        nodes.Add(new TreeNode(Base64Encode((string)objInfo.Value.objectId),
+                      objInfo.Value.objectKey, "zipfile", false));
+                    }
+                    else
+                    {
+                        nodes.Add(new TreeNode(Base64Encode((string)objInfo.Value.objectId),
+                          objInfo.Value.objectKey, "object", false));
+                    }
                 }
             }
             return nodes;
@@ -138,7 +147,7 @@ namespace forgesample.Controllers
             {
                 throw new System.Exception("Missing file to upload");
             }
-            
+
 
             string bucketKey = req.Params["bucketKey"];
             HttpPostedFile file = req.Files[0];
