@@ -78,7 +78,12 @@ function prepareAppBucketTree() {
                 'icon': 'glyphicon glyphicon-cloud'
             },
             'bucket': {
-                'icon': 'glyphicon glyphicon-folder-open'
+                'icon': 'glyphicon glyphicon-gift',
+                'valid_children': ['zipfile', 'object']
+            },
+            'zipfile': {
+                'icon': 'glyphicon glyphicon-folder-open',
+                'valid_children': ['object']
             },
             'object': {
                 'icon': 'glyphicon glyphicon-file'
@@ -131,6 +136,18 @@ function autodeskCustomMenu(autodeskNode) {
                         deleteBucket();
                     },
                     icon: 'glyphicon glyphicon-trash'
+                }
+            };
+            break;
+        case "zipfile":
+            items = {
+                deleteFile: {
+                    label: "Delete",
+                    action: function () {
+                        var treeNode = $('#appBuckets').jstree(true).get_selected(true)[0];
+                        deleteFile(treeNode);
+                    },
+                    icon: 'glyphicon glyphicon-remove'
                 }
             };
             break;

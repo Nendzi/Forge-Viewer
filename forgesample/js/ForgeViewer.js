@@ -15,8 +15,15 @@ function launchViewer(urn) {
 }
 
 function onDocumentLoadSuccess(doc) {
-    var viewables = doc.getRoot().getDefaultGeometry();
-    viewer.loadDocumentNode(doc, viewables).then(i => {
+
+    var geometryItems = doc.getRoot().search({ "role": "3d", "type": "geometry" });
+
+    // Try 3D first
+    if (geometryItems.length < 1) {
+        geometryItems.push(doc.getRoot().getDefaultGeometry())
+    }
+
+    viewer.loadDocumentNode(doc, geometryItems[0]).then(i => {
         // documented loaded, any action?
     });
 }
