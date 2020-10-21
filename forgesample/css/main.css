@@ -30,14 +30,14 @@ body {
 }
 
 .handleSelectionExtensionIcon {
-	background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/object-group.png);
+	background-image: url(/img/object-group.png);
 	background-size: 24px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .modelSummaryExtensionIcon {
-	background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/dashboard.png);
+	background-image: url(/img/dashboard.png);
 	background-size: 24px;
 	background-repeat: no-repeat;
 	background-position: center;
