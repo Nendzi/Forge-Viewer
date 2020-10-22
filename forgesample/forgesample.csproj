@@ -80,6 +80,8 @@
     <Content Include="img\myAwesomeIcon.png" />
     <Content Include="img\object-group.png" />
     <Content Include="index.html" />
+    <Content Include="js\Dashboard\dashboard.js" />
+    <Content Include="js\Dashboard\DashboardPanel.js" />
     <Content Include="js\ForgeTree.js" />
     <Content Include="js\ForgeViewer.js" />
     <Content Include="js\handleselectionextension.js" />

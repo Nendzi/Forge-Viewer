@@ -51,7 +51,7 @@
             // getAllLeafComponents function is defined at the bottom
             this.getAllLeafComponents((dbIds) => {
                 // Now for leaf components, let's get some properties and count occurrences of each value
-                const filteredProps = ['Material', 'Type Name'];
+                const filteredProps = ['Material', 'Mass'];
                 // Get only the properties we need for the leaf dbIds
                 this.viewer.model.getBulkProperties(dbIds, filteredProps, (items) => {
                     // Iterate through the elements we found
