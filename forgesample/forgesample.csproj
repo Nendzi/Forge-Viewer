@@ -82,6 +82,8 @@
     <Content Include="index.html" />
     <Content Include="js\Dashboard\dashboard.js" />
     <Content Include="js\Dashboard\DashboardPanel.js" />
+    <Content Include="js\Dashboard\PanelBarChart.js" />
+    <Content Include="js\Dashboard\PanelPieChart.js" />
     <Content Include="js\ForgeTree.js" />
     <Content Include="js\ForgeViewer.js" />
     <Content Include="js\handleselectionextension.js" />
