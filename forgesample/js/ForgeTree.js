@@ -114,6 +114,27 @@ function prepareAppBucketTree() {
                 });
             })
         }
+        // moj dodatak za prikazivanje zip fajla
+        else if (data != null && data.node != null && data.node.type == 'zipfile'){
+            $("#forgeViewer").empty();
+            var urn = data.node.id;
+            getForgeToken(function (access_token) {
+                jQuery.ajax({
+                    url: 'https://developer.api.autodesk.com/modelderivative/v2/designdata/' + urn + '/manifest',
+                    headers: { 'Authorization': 'Bearer ' + access_token },
+                    success: function (res) {
+                        if (res.status === 'success') launchViewer(urn);
+                        else $("#forgeViewer").html('The translation job still running: ' + res.progress + '. Please try again in a moment.');
+                    },
+                    error: function (err) {
+                        var msgButton = 'This file is not translated yet! ' +
+                            '<button class="btn btn-xs btn-info" onclick="translateObject()"><span class="glyphicon glyphicon-eye-open"></span> ' +
+                            'Start translation</button>'
+                        $("#forgeViewer").html(msgButton);
+                    }
+                });
+            })
+        }
     });
 }
 
