@@ -81,7 +81,7 @@
                 meshes.push(mesh);
                 console.log(meshes);
             }, true);
-        }
+        }        
 
         let counter = startPosition;
 
