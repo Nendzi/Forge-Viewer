@@ -90,6 +90,7 @@
     <Content Include="js\modelsummaryextension.js" />
     <Content Include="js\myawesomeextension.js" />
     <None Include="Resources\myAwesomeIcon.bmp" />
+    <Content Include="js\script3.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

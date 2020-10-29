@@ -18,6 +18,7 @@
     <script src="js/ForgeTree.js"></script>
     <script src="js/ForgeViewer.js"></script>
     <script src="/js/myawesomeextension.js"></script>
+    <script src="/js/script3.js"></script>
     <!--
     <script src="/js/handleselectionextension.js"></script>
     <script src="/js/modelsummaryextension.js"></script>
@@ -47,7 +48,7 @@
     <!-- End of navbar -->
     <div class="container-fluid fill">
         <div class="row fill">
-            <div class="col-sm-4 fill">
+            <div class="col-sm-3 fill">
                 <div class="panel panel-default fill">
                     <div class="panel-heading" data-toggle="tooltip">
                         Buckets &amp; Objects
@@ -57,11 +58,56 @@
                         </button>
                     </div>
                     <div id="appBuckets">
-                        tree here
-                    </div>
+                        Tree here
+                    </div>                     
+                       <div id="selektor">
+                            <!--Ivanin kod ne krivite mene-->
+                            <form action="#" method="POST" id="elForma">
+                                <fieldset class="grupa">
+                                    <legend class="naziv">Element configurator</legend>
+                                    <div id="podela" class="razdela">
+                                        <div class="selekcija">
+                                            <label for="elementi">Choose front type:</label>
+                                            <div>
+                                                <select name="elementi" id="elementi" class="odabir">
+                                                    <option value="closed">Closed</option>
+                                                    <option value="open">Open</option>
+                                                    <option value="drawer">Drawer</option>
+                                                    <option value="doublDoor">Double door</option>
+                                                    <option value="leftDoor">Left door</option>
+                                                    <option value="rightdoor">Right door</option>
+                                                    <option value="cassette">Cassette</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="broj">
+                                            <label for="procenti">Element heigth [%]:</label>
+                                            <div class="teksterija">
+                                                <!--oninput: izmena funkcija - menja aktivno/neaktivno stanje dugmeta-->
+                                                <textarea class="percentum" id="procenti" name="unos" placeholder="Left 100%" onkeydown="proveraFunkcija(event, this)" oninput="naUnos(this)"></textarea>
+                                                <div class="brisanje">
+                                                    <!--u prvom učitavanju ne treba dugme za brisanje-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--mesto gde se dodaje novi deo forme-->
+                                    <div id="dodatak1"></div>
+                                    <p id="poruka">Input procentage</p>
+                                    <p id="poruka2">Invalid input, overflow of 100%</p>
+                                    <p id="proba"></p>
+                                    <!--onclick: Nenina funkcija-->
+                                    <button type="submit" id="prosledi" class="neaktivna" disabled>Submit</button>
+                                    <!--onclick: dodaj funkcija - dodaje novi HTML-->
+                                    <button type="button" id="nova" class="neaktivna" disabled>Add new</button>
+                                </fieldset>
+                            </form>
+                        </div>                    
                 </div>
             </div>
-            <div class="col-sm-8 fill">
+            <div class="col-sm-9 fill">
                 <div id="forgeViewer"></div>
             </div>
         </div>

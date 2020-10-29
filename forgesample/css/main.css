@@ -15,7 +15,7 @@ body {
 #appBuckets {
 	overflow: auto;
 	width: 100%;
-	height: calc(100vh - 150px);
+	height: calc(40vh - 150px);
 }
 
 #forgeViewer {
@@ -66,4 +66,117 @@ body {
 	width: 100%;
 	padding: 3%;
 	display: block;
+}
+
+
+#selektor {
+	width: 100%;
+	min-width: 350px;
+	border: 5px solid black;
+	border-radius: 10px;
+}
+
+.prostor {
+	width: 65%;
+	border: 5px solid black;
+	border-radius: 10px;
+}
+
+.grupa {
+	margin: 5px;
+}
+
+.naziv {
+	padding: 3px 10px;
+	background-color: rgb(78, 89, 100);
+	border-radius: 0 10px 0 0;
+}
+
+label {
+	font-weight: bold;
+	width: 150px;
+	font-size: 15px;
+}
+
+.selekcija {
+	width: 140px;
+}
+
+.odabir {
+	padding: 0 5px;
+	height: 2rem;
+	border-radius: 5px;
+	border: none;
+}
+
+.razdela {
+	display: flex;
+	justify-content: space-between;
+}
+
+.teksterija {
+	width: 165px;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+.percentum {
+	max-width: 115px;
+	height: 2rem;
+	padding: 0 5px;
+	resize: none;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 2rem;
+	overflow: hidden;
+}
+
+#prosledi, #nova {
+	background-color: rgb(78, 89, 100);
+	color: white;
+	height: 25px;
+	border-radius: 5px;
+	margin-top: 12px;
+}
+
+#nova {
+	float: right;
+}
+
+.neaktivna {
+	opacity: 50%;
+	cursor: not-allowed;
+}
+
+.aktivna {
+	opacity: 100%;
+	cursor: pointer;
+}
+
+#poruka, #poruka2 {
+	display: none;
+	color: red;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+	background-color: rgb(255, 255, 255, 0.9);
+	border-radius: 3px;
+}
+
+.percentum::placeholder {
+	color: darkslategrey;
+}
+
+.brisanje {
+	width: 27px;
+	height: 27px;
+}
+
+.zaBrisanje {
+	background-color: red;
+	color: white;
+	text-shadow: 1px 0px black;
+	border-radius: 5px;
 }

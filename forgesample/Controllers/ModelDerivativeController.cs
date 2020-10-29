@@ -103,6 +103,7 @@ namespace forgesample.Controllers
         {
             public string bucketKey { get; set; }
             public string objectName { get; set; }
+            public string assemblyName { get; set; }
         }
     }
 
