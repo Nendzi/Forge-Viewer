@@ -72,24 +72,17 @@ body {
 #selektor {
 	width: 100%;
 	min-width: 350px;
-	border: 5px solid black;
+	/*border: 3px solid rgb(228, 220, 220);*/
 	border-radius: 10px;
 }
 
-.prostor {
-	width: 65%;
-	border: 5px solid black;
-	border-radius: 10px;
-}
-
-.grupa {
-	margin: 5px;
+.razdela{
+	padding: 0 5px;
 }
 
 .naziv {
 	padding: 3px 10px;
-	background-color: rgb(78, 89, 100);
-	border-radius: 0 10px 0 0;
+	background-color:#f5f5f5;
 }
 
 label {
@@ -99,14 +92,14 @@ label {
 }
 
 .selekcija {
-	width: 140px;
+	width: 45%;
 }
 
 .odabir {
 	padding: 0 5px;
 	height: 2rem;
 	border-radius: 5px;
-	border: none;
+	border: 1px solid black;
 }
 
 .razdela {
@@ -117,7 +110,7 @@ label {
 .teksterija {
 	width: 165px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	box-sizing: border-box;
 	align-items: center;
 }
@@ -134,15 +127,12 @@ label {
 }
 
 #prosledi, #nova {
-	background-color: rgb(78, 89, 100);
+	background-color:#5bc0de;
 	color: white;
 	height: 25px;
 	border-radius: 5px;
-	margin-top: 12px;
-}
-
-#nova {
-	float: right;
+	margin: 12px 5px 0 5px;
+	float: left;
 }
 
 .neaktivna {
@@ -179,4 +169,5 @@ label {
 	color: white;
 	text-shadow: 1px 0px black;
 	border-radius: 5px;
+	margin-right: 10px;
 }
